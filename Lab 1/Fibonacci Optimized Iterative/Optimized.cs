@@ -19,10 +19,7 @@ class FibonacciOptimizedIterative
     static void ComputeAndMeasure(int maxN)
     {
         Stopwatch stopwatch = Stopwatch.StartNew();
-        for (int i = 0; i <= maxN; i++)
-        {
-            Fibonacci(i);
-        }
+        for (int i = 0; i <= maxN; i++) { Fibonacci(i); }
         stopwatch.Stop();
 
         long ticks = stopwatch.ElapsedTicks;
@@ -34,7 +31,6 @@ class FibonacciOptimizedIterative
     static void Main()
     {
         int[] testCases = { 5, 10, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 15000, 20000 };
-        foreach (int n in testCases)
-            ComputeAndMeasure(n);
+        foreach (int n in testCases) ComputeAndMeasure(n);
     }
 }
